@@ -1,0 +1,32 @@
+* {
+  font-family: 'Open Sans', 'Sans Serif';
+}
+
+body {
+  /* 100% doesn't work here. use 100vh! */
+  height: 100vh; 
+  background-color: rgba(29, 91, 97, 0.76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph {
+  /* need display:block to center align with margin:auto */
+  
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.3);
+}
+
+.d3-tip {
+  line-height: 1.2em;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* color doping description differently */
+.d3-tip .doping {
+  color: lightseagreen;
+}
+
+
