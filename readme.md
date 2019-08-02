@@ -97,6 +97,6 @@ const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 // creating selections (array) of two elements (appended `<g>`)
 // from which we can build legend icons
 ```
-`coloScale.domain()` returns values that is connected to corresponding color scheme from the range.
+`colorScale.domain()` returns values that is connected to corresponding color scheme from the range.
 We can retreive only the colors that were actually used for given data so that we can create a legend explaining what those colors imply.
 
