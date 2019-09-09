@@ -4,10 +4,10 @@
 
 ### Elements Plot
 1. Append svg canvas into body
-2. Set width and height adding margins to the graph dimension.
+2. Set svg width and height including margins for the graph.
 3. Append group(g) to svg 
-4. Translate its origin to the desirable origin of the chart.
-5. The variable svg refers to this group element.
+4. Translate group's origin to match the origin of the chart.
+5. Store the group element into <code>svg</code> varibale.
 
 This makes it easier to place x and y axis, not needing to translate them separately. You only need to translate the container group and bring down the x-axis by the height of the graph.
 
