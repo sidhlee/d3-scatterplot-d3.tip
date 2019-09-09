@@ -4,7 +4,7 @@
 
 ### Elements Plot
 1. Append svg canvas into body
-2. Set width and height adding marins to the graph dimension.
+2. Set width and height adding margins to the graph dimension.
 3. Append group(g) to svg 
 4. Translate its origin to the desirable origin of the chart.
 5. The variable svg refers to this group element.
