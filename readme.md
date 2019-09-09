@@ -48,8 +48,8 @@ svg {
 
 ### SVG Group Element
 Group Element &lt;g&gt; is a container used to group other SVG element. 
-You can set transform attribute on group element to move child SVG elements from where they are set initially.
-Note: You are setting x and y coords on the **child element**, not the container element(&lt;g&gt;).
+You can set transform attribute on group element to move its nested element.
+Note: You are setting `x` and `y` attr on the **child element**, not the container element(&lt;g&gt;).
 ```javascript
 /* legend */
       const legend = svg.selectAll('.legend')
@@ -69,7 +69,7 @@ Note: You are setting x and y coords on the **child element**, not the container
 
       legend.append('text')
         .attr('x', width - 24)
-        .attr('text-anchor', 'end')
+        .attr('text-anchor', 'end') // aligns the end of text to the x-coord and baseline to y-coord
         .attr('y', 15)
         .text(d => d ? "Riders with doping allegations" :
         "No doping allegations")
@@ -79,7 +79,7 @@ Note: You are setting x and y coords on the **child element**, not the container
 ### d3.scaleOrdinal([[domain,]range])
 Just like `d3.scaleLinear`, `d3.scaleOrdinal` takes range as an argument when provided with only one. When there are two arguments fed into the scales, first one becomes the domain.
 But unlike `scaleLinear` whose range will default to [0, 1] without setting it explicitely, `scaleOrdinal` will have an empty array as its range when you don't specify it.
-In addition, when you call the scale function returned from `d3.scaleOrdinal`, you can pass in a value to output a corresponding value from the range. If the input value was not found in the domain, it will be pushed into the array, and you will get the "next" value from the range array.
+In addition, when you call the scale function returned from `d3.scaleOrdinal`, you can pass in a domain value to output a corresponding value from the range. If the input value was not found in the domain, it will be pushed into the domain array, and you will get the "next" value from the range array.
 Next time you input the same value that was just added to the domain, the same corresponding value from the range will be returned.
 
 ```javascript
@@ -98,5 +98,5 @@ const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 // from which we can build legend icons
 ```
 `colorScale.domain()` returns values that is connected to corresponding color scheme from the range.
-We can retreive only the colors that were actually used for given data so that we can create a legend explaining what those colors imply.
+We can retreive only the colors that were actually used for domain vlues so that we can create a legend explaining what those colors imply.
 
